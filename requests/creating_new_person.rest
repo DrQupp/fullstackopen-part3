@@ -22,3 +22,12 @@ content-type: application/json
     "name": "Arto Hellas",
     "number": "test number 0123"
 }
+
+### Send to online app
+POST https://fullstackopen-part3-cxfh.onrender.com/api/persons
+content-type: application/json
+
+{
+    "name": "test",
+    "number": "test number 0123"
+}
