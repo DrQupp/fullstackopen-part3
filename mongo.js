@@ -1,18 +1,18 @@
 const mongoose = require('mongoose')
 
-if (process.argv.length<3) {
+if (process.argv.length < 3) {
   console.log('give password as argument')
   process.exit(1)
 }
 
-let addFlag = process.argv.length < 5 ? false : true;
+let addFlag = process.argv.length < 5 ? false : true
 
 const password = process.argv[2]
 
 const url =
   `mongodb+srv://qupp:${password}@cluster0.kh5wb.mongodb.net/phonebook?retryWrites=true&w=majority`
 
-mongoose.set('strictQuery',false)
+mongoose.set('strictQuery', false)
 
 mongoose.connect(url)
 
@@ -29,13 +29,13 @@ if (addFlag) {
     name: process.argv[3],
     number: process.argv[4],
   })
-  person.save().then(result => {
+  person.save().then(() => {
     console.log(`phone number of ${person.name} saved!`)
     mongoose.connection.close()
   })
 }
 else {
-  console.log("Phonebook:")
+  console.log('Phonebook:')
   Person.find({}).then(result => {
     result.forEach(person => {
       console.log(person.name, person.number)
