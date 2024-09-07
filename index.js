@@ -31,6 +31,7 @@ app.get('/info', (request, response, next) => {
   })
 
   app.get('/api/persons', (request, response) => {
+    console.log('In api/persons')
     Person.find({}).then(persons => {
       response.json(persons)
     })
