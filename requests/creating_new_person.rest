@@ -3,7 +3,7 @@ content-type: application/json
 
 {
     "name": "test",
-    "number": "test number 0123"
+    "number": "111-11324"
 }
 
 ### 
@@ -20,7 +20,7 @@ content-type: application/json
 
 {
     "name": "Arto Hellas",
-    "number": "test number 0123"
+    "number": "1234556"
 }
 
 ### Send to online app
